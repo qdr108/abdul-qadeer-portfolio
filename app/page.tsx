@@ -26,9 +26,49 @@ const leadershipPoints = [
 
 const projects = [
   {
+    name: "Receipts to Riches",
+    description:
+      "Receipt-focused mobile application shipped on both iOS and Android for production users.",
+    role:
+      "Worked on React Native mobile delivery, production build readiness, and App Store + Play Store release support.",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "REST APIs",
+      "Firebase",
+      "iOS Release",
+      "Android Release",
+    ],
+    appStore:
+      "https://apps.apple.com/us/app/receipts-to-riches/id6781012948",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.receiptstoriches.app",
+  },
+  {
+    name: "Fence Space",
+    description:
+      "Fence Space mobile application delivered as a production cross-platform release for iOS and Android.",
+    role:
+      "Worked on React Native implementation, API integration, release preparation, and store deployment support.",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "REST APIs",
+      "Firebase",
+      "App Store Connect",
+      "Google Play Console",
+    ],
+    appStore:
+      "https://apps.apple.com/us/app/fence-space/id6769825911",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.fencespace.app",
+  },
+  {
     name: "Clean N Sober",
     description:
       "Recovery and wellness mobile application focused on dependable cross-platform delivery and production-grade purchase flows.",
+    role:
+      "Worked on React Native delivery, Firebase integration, push notifications, Apple In-App Purchases, Google Play Billing, and store release support.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -47,6 +87,8 @@ const projects = [
     name: "Wedstimate",
     description:
       "Wedding vendor marketplace app with payments, messaging, and responsive user flows for a two-sided marketplace experience.",
+    role:
+      "Built marketplace mobile flows with React Native, TypeScript, Firebase, Stripe payments, real-time messaging, and push notifications.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -64,6 +106,8 @@ const projects = [
     name: "EYEQ APP",
     description:
       "AI-powered wellness app combining mobile product delivery, device capabilities, and deployment readiness for the App Store.",
+    role:
+      "Implemented mobile app features around authentication, Firebase, camera/device capabilities, and App Store deployment readiness.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -78,6 +122,8 @@ const projects = [
     name: "Cruisimity",
     description:
       "Social navigation and driving community app built around location-aware experiences, maps, and real-time mobile interactions.",
+    role:
+      "Delivered location-aware mobile features using Google Maps, geolocation, Firebase, real-time interactions, and iOS release workflows.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -118,14 +164,12 @@ export default function Home() {
   return (
     <main className="relative overflow-hidden bg-slate-950 text-white">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
-        <div className="absolute right-0 top-72 h-[26rem] w-[26rem] rounded-full bg-sky-500/10 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0),_rgba(2,6,23,0.92)_55%,_rgba(2,6,23,1)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent)]" />
       </div>
 
-      <section className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 pb-20 pt-6 sm:px-10 lg:px-12">
-        <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
+      <section className="mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col px-6 pb-14 pt-6 sm:px-10 lg:px-12">
+        <header className="flex items-center justify-between rounded-3xl border border-white/10 bg-white/5 px-5 py-3 backdrop-blur md:rounded-full">
           <div>
             <p className="font-display text-lg tracking-tight text-white">
               Abdul Qadeer
@@ -153,18 +197,17 @@ export default function Home() {
           </nav>
         </header>
 
-        <div className="grid flex-1 items-center gap-16 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:py-24">
-          <section className="space-y-8">
+        <div className="grid flex-1 items-center gap-10 py-12 lg:grid-cols-[1.06fr_0.94fr] lg:py-16">
+          <section className="space-y-7">
             <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
               Available for Remote React Native Opportunities Worldwide
             </div>
-            <div className="space-y-6">
+            <div className="space-y-5">
               <p className="text-sm font-medium uppercase tracking-[0.32em] text-slate-400">
                 Karachi, Pakistan
               </p>
-              <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Building production-ready mobile products and leading teams that
-                ship with confidence.
+              <h1 className="max-w-4xl text-4xl font-semibold leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                React Native team lead shipping production apps for iOS and Android.
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
                 I am a Team Lead React Native Engineer with 4+ years of
@@ -178,15 +221,23 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <a
                 className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-                href="#contact"
+                href="#projects"
               >
-                Let&apos;s Talk
+                View Projects
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
-                href="mailto:aq579733@gmail.com"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
               >
-                Email Me
+                Download Resume
+              </a>
+              <a
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
+                href="#contact"
+              >
+                Contact
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
@@ -208,7 +259,7 @@ export default function Home() {
           </section>
 
           <aside className="grid gap-5">
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.07] p-7 shadow-2xl shadow-slate-950/40 backdrop-blur">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.07] p-7 shadow-2xl shadow-slate-950/40 backdrop-blur">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 Core Focus
               </p>
@@ -237,7 +288,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-900/70 p-7 backdrop-blur">
+            <div className="rounded-3xl border border-white/10 bg-slate-900/70 p-7 backdrop-blur">
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
                 High-Impact Stack
               </p>
@@ -272,7 +323,7 @@ export default function Home() {
             title="Recruiter-friendly technical leadership with hands-on mobile delivery."
             description="I lead mobile engineering with a strong execution mindset: clear ownership, reliable architecture, disciplined reviews, and shipping to production without drama."
           />
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
             <p className="text-base leading-8 text-slate-300">
               My work centers on scalable React Native applications, modern
               TypeScript codebases, and dependable integrations including
@@ -321,7 +372,7 @@ export default function Home() {
             {leadershipPoints.map((point) => (
               <div
                 key={point}
-                className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 backdrop-blur"
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
               >
                 <p className="text-base leading-7 text-slate-200">{point}</p>
               </div>
@@ -343,7 +394,7 @@ export default function Home() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="group rounded-[2rem] border border-white/10 bg-slate-900/75 p-7 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-slate-900"
+              className="group rounded-3xl border border-white/10 bg-slate-900/75 p-7 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-slate-900"
             >
               <div className="flex items-start justify-between gap-6">
                 <div>
@@ -352,6 +403,10 @@ export default function Home() {
                   </h3>
                   <p className="mt-4 text-base leading-7 text-slate-300">
                     {project.description}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-slate-400">
+                    <span className="font-semibold text-slate-200">My role:</span>{" "}
+                    {project.role}
                   </p>
                 </div>
               </div>
@@ -396,7 +451,7 @@ export default function Home() {
         id="contact"
         className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
       >
-        <div className="rounded-[2rem] border border-cyan-400/20 bg-cyan-400/10 p-8 sm:p-10">
+        <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-8 sm:p-10">
           <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div className="space-y-5">
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">
