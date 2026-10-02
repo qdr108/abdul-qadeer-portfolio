@@ -16,7 +16,31 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Abdul Qadeer | Team Lead React Native Engineer",
   description:
-    "Professional portfolio for Abdul Qadeer, a Team Lead React Native Engineer focused on scalable cross-platform mobile apps and remote international opportunities.",
+    "React Native Engineer and Team Lead with 5+ years of experience. Explore six mobile projects, payments and Firebase integrations, and iOS and Android release experience. Open to remote roles worldwide.",
+  keywords: [
+    "Abdul Qadeer",
+    "React Native Engineer",
+    "React Native Developer",
+    "Mobile Team Lead",
+    "TypeScript",
+    "iOS",
+    "Android",
+    "Karachi",
+    "Remote",
+  ],
+  openGraph: {
+    title: "Abdul Qadeer | React Native Engineer & Team Lead",
+    description:
+      "5+ years in mobile engineering. Six selected projects. Hands-on leadership and iOS & Android delivery. Open to remote opportunities.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Abdul Qadeer | React Native Engineer & Team Lead",
+    description:
+      "React Native, TypeScript, payments and production mobile releases. Open to remote opportunities worldwide.",
+  },
 };
 
 export default function RootLayout({

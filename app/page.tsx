@@ -1,505 +1,485 @@
-const skills = [
-  "React Native",
-  "TypeScript",
-  "Redux Toolkit",
-  "Firebase",
-  "REST APIs",
-  "Stripe",
-  "Apple In-App Purchases",
-  "Google Play Billing",
-  "Authentication",
-  "Push Notifications",
-  "Google Maps",
-  "Geolocation",
-  "App Store Connect",
-  "TestFlight",
-  "Google Play Console",
-  "Production Deployments",
-];
+import Image from "next/image";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Check,
+  Smartphone,
+} from "lucide-react";
 
-const leadershipPoints = [
-  "Lead a team of 3 React Native developers at Opus Geeks and keep daily execution aligned with product priorities.",
-  "Break down delivery into clear tasks, assign ownership, and keep releases moving across iOS and Android.",
-  "Review code before merge, maintain quality standards, and mentor developers on architecture and implementation choices.",
-  "Own operational delivery through App Store Connect, TestFlight, Google Play Console, release coordination, and production deployments.",
-];
+const email = "aq579733@gmail.com";
+const linkedin = "https://www.linkedin.com/in/abdul-qadeer-887332242/";
+const github = "https://github.com/qdr108";
+const interview = `mailto:${email}?subject=React%20Native%20Opportunity%20-%20Abdul%20Qadeer`;
 
 const projects = [
   {
-    name: "Receipts to Riches",
-    description:
-      "Receipt-focused mobile application shipped on both iOS and Android for production users.",
-    role:
-      "Worked on React Native mobile delivery, production build readiness, and App Store + Play Store release support.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "REST APIs",
-      "Firebase",
-      "iOS Release",
-      "Android Release",
-    ],
-    appStore:
-      "https://apps.apple.com/us/app/receipts-to-riches/id6781012948",
-    playStore:
-      "https://play.google.com/store/apps/details?id=com.receiptstoriches.app",
-  },
-  {
-    name: "Fence Space",
-    description:
-      "Fence Space mobile application delivered as a production cross-platform release for iOS and Android.",
-    role:
-      "Worked on React Native implementation, API integration, release preparation, and store deployment support.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "REST APIs",
-      "Firebase",
-      "App Store Connect",
-      "Google Play Console",
-    ],
-    appStore:
-      "https://apps.apple.com/us/app/fence-space/id6769825911",
-    playStore:
-      "https://play.google.com/store/apps/details?id=com.fencespace.app",
-  },
-  {
-    name: "Clean N Sober",
-    description:
-      "Recovery and wellness mobile application focused on dependable cross-platform delivery and production-grade purchase flows.",
-    role:
-      "Worked on React Native delivery, Firebase integration, push notifications, Apple In-App Purchases, Google Play Billing, and store release support.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "Redux Toolkit",
-      "Firebase",
-      "Push Notifications",
-      "Apple IAP",
-      "Google Play Billing",
-    ],
-    appStore:
-      "https://apps.apple.com/us/app/clean-n-sober/id6755741544",
-    playStore:
-      "https://play.google.com/store/apps/details?id=com.CleanNSober.co",
-  },
-  {
+    id: "6712045315",
     name: "Wedstimate",
+    category: "Wedding vendor marketplace",
     description:
-      "Wedding vendor marketplace app with payments, messaging, and responsive user flows for a two-sided marketplace experience.",
-    role:
-      "Built marketplace mobile flows with React Native, TypeScript, Firebase, Stripe payments, real-time messaging, and push notifications.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "Firebase",
-      "Stripe",
-      "Real-Time Messaging",
-      "Push Notifications",
+      "A two-sided mobile marketplace connecting couples with wedding vendors.",
+    contributions: [
+      "Built marketplace flows with React Native and TypeScript.",
+      "Integrated Stripe payments, Firebase messaging and push notifications.",
     ],
+    stack: ["React Native", "TypeScript", "Stripe", "Firebase"],
     appStore:
       "https://apps.apple.com/us/app/wedstimate-wedding-vendors/id6712045315",
     playStore:
       "https://play.google.com/store/apps/details?id=com.wedstimatemobileapp&hl=en",
+    tone: "rose",
   },
   {
-    name: "EYEQ APP",
+    id: "6755741544",
+    name: "Clean N Sober",
+    category: "Recovery & wellness",
     description:
-      "AI-powered wellness app combining mobile product delivery, device capabilities, and deployment readiness for the App Store.",
-    role:
-      "Implemented mobile app features around authentication, Firebase, camera/device capabilities, and App Store deployment readiness.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "Firebase",
-      "Vision Camera",
-      "Authentication",
-      "App Store Deployment",
+      "A cross-platform recovery app with subscription purchase flows and notifications.",
+    contributions: [
+      "Delivered mobile features with Redux Toolkit and Firebase.",
+      "Integrated Apple In-App Purchases, Google Play Billing and push notifications.",
     ],
-    appStore: "https://apps.apple.com/us/app/eyeq-app/id6758163806",
+    stack: ["React Native", "Redux Toolkit", "Apple IAP", "Play Billing"],
+    appStore: "https://apps.apple.com/us/app/clean-n-sober/id6755741544",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.CleanNSober.co",
+    tone: "green",
   },
   {
+    id: "6744337395",
     name: "Cruisimity",
+    category: "Social navigation",
     description:
-      "Social navigation and driving community app built around location-aware experiences, maps, and real-time mobile interactions.",
-    role:
-      "Delivered location-aware mobile features using Google Maps, geolocation, Firebase, real-time interactions, and iOS release workflows.",
-    technologies: [
-      "React Native",
-      "TypeScript",
-      "Google Maps",
-      "Geolocation",
-      "Firebase",
-      "Real-Time Features",
+      "Location-aware experiences for a driving community, with maps and real-time interactions.",
+    contributions: [
+      "Delivered Google Maps, geolocation and Firebase-powered mobile features.",
+      "Supported real-time interactions and iOS release workflows.",
     ],
+    stack: ["React Native", "Google Maps", "Geolocation", "Firebase"],
     appStore: "https://apps.apple.com/us/app/cruisimity/id6744337395",
+    tone: "yellow",
+  },
+  {
+    id: "6781012948",
+    name: "Receipts to Riches",
+    category: "Receipt rewards",
+    description:
+      "A receipt-focused mobile product released on both iOS and Android.",
+    contributions: [
+      "Contributed to React Native mobile delivery and production build readiness.",
+      "Supported App Store and Google Play release preparation.",
+    ],
+    stack: ["React Native", "TypeScript", "REST APIs", "Firebase"],
+    appStore: "https://apps.apple.com/us/app/receipts-to-riches/id6781012948",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.receiptstoriches.app",
+    tone: "yellow",
+  },
+  {
+    id: "6769825911",
+    name: "Fence Space",
+    category: "Cross-platform mobile product",
+    description:
+      "A production mobile application delivered across iOS and Android.",
+    contributions: [
+      "Implemented React Native features and API integrations.",
+      "Contributed to release preparation and deployment on both stores.",
+    ],
+    stack: ["React Native", "TypeScript", "REST APIs", "Firebase"],
+    appStore: "https://apps.apple.com/us/app/fence-space/id6769825911",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.fencespace.app",
+    tone: "green",
+  },
+  {
+    id: "6758163806",
+    name: "EYEQ APP",
+    category: "AI-powered wellness",
+    description:
+      "A wellness product bringing authentication and camera capabilities into a mobile experience.",
+    contributions: [
+      "Implemented authentication, Firebase and camera/device features.",
+      "Supported App Store deployment readiness.",
+    ],
+    stack: ["React Native", "TypeScript", "Vision Camera", "Firebase"],
+    appStore: "https://apps.apple.com/us/app/eyeq-app/id6758163806",
+    tone: "rose",
   },
 ];
 
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="max-w-2xl space-y-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-300/80">
-        {eyebrow}
-      </p>
-      <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        {title}
-      </h2>
-      <p className="text-base leading-8 text-slate-300 sm:text-lg">
-        {description}
-      </p>
-    </div>
-  );
-}
+const expertise = [
+  {
+    title: "Mobile engineering",
+    items: "React Native, TypeScript, Redux Toolkit, iOS & Android",
+    detail:
+      "Cross-platform implementation and maintainable mobile architecture.",
+  },
+  {
+    title: "Payments & subscriptions",
+    items: "Stripe, Apple In-App Purchases, Google Play Billing",
+    detail: "Marketplace payments and platform-native purchase integrations.",
+  },
+  {
+    title: "Connected experiences",
+    items: "Firebase, REST APIs, Authentication, Push Notifications",
+    detail: "Messaging, authenticated flows and real-time mobile interactions.",
+  },
+  {
+    title: "Device features & releases",
+    items: "Google Maps, Geolocation, Vision Camera, TestFlight",
+    detail:
+      "Device integrations and delivery through App Store Connect and Google Play Console.",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden bg-slate-950 text-white">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0),_rgba(2,6,23,0.92)_55%,_rgba(2,6,23,1)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent)]" />
-      </div>
-
-      <section className="mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col px-6 pb-14 pt-6 sm:px-10 lg:px-12">
-        <header className="flex items-center justify-between rounded-3xl border border-white/10 bg-white/5 px-5 py-3 backdrop-blur md:rounded-full">
-          <div>
-            <p className="font-display text-lg tracking-tight text-white">
-              Abdul Qadeer
-            </p>
-            <p className="text-xs uppercase tracking-[0.22em] text-slate-400">
-              Team Lead React Native Engineer
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <header className="site-header">
+        <div className="container header-inner">
+          <a className="wordmark" href="#main" aria-label="Abdul Qadeer home">
+            <span className="monogram">
+              AQ<span>.</span>
+            </span>
+            <span>Abdul Qadeer</span>
+          </a>
+          <nav aria-label="Main navigation">
+            <a href="#projects">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+          </nav>
+          <a className="header-contact" href="#contact">
+            Let&apos;s talk <ArrowUpRight size={16} />
+          </a>
+        </div>
+      </header>
+      <main id="main">
+        <section className="hero container" aria-labelledby="hero-title">
+          <p className="availability">
+            <span /> Open to remote opportunities worldwide
+          </p>
+          <h1 id="hero-title">
+            Abdul Qadeer
+            <span>
+              React Native Engineer
+              <br />
+              &amp; Team Lead.
+            </span>
+          </h1>
+          <p className="hero-description">
+            I build and ship iOS &amp; Android apps, integrate complex mobile
+            features, and lead teams from implementation to store release.
+          </p>
+          <div className="hero-actions">
+            <a className="button primary" href={interview}>
+              <Mail size={18} /> Discuss a role <ArrowUpRight size={17} />
+            </a>
+            <a
+              className="button secondary"
+              href="/resume.pdf"
+              download="Abdul-Qadeer-Resume.pdf"
+            >
+              <Download size={18} /> Download resume
+            </a>
+            <a className="text-link" href="#projects">
+              Explore my work <ArrowDown size={16} />
+            </a>
+          </div>
+          <div className="hero-meta">
+            <span>
+              <MapPin size={15} /> Karachi, Pakistan
+            </span>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <Linkedin size={15} /> LinkedIn <ArrowUpRight size={13} />
+            </a>
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <Github size={15} /> GitHub <ArrowUpRight size={13} />
+            </a>
+          </div>
+          <div className="proof-strip">
+            <div>
+              <strong>5+</strong>
+              <span>Years in mobile engineering</span>
+            </div>
+            <div>
+              <strong>6</strong>
+              <span>Selected mobile projects</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Developers led at Opus Geeks</span>
+            </div>
+            <div>
+              <Smartphone size={28} />
+              <span>App Store &amp; Google Play releases</span>
+            </div>
+          </div>
+        </section>
+        <section
+          id="projects"
+          className="work-section section"
+          aria-labelledby="work-title"
+        >
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">01 / Selected work</p>
+                <h2 id="work-title">Built for real users.</h2>
+              </div>
+              <p>
+                Mobile products I&apos;ve contributed to.
+                <br />
+                Explore the apps and my role in each.
+              </p>
+            </div>
+            <div className="project-grid">
+              {projects.map((project, index) => (
+                <article className="project" key={project.id}>
+                  <a
+                    className={`project-visual ${project.tone}`}
+                    href={project.appStore}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.name} on the App Store`}
+                  >
+                    <div className="visual-label">
+                      <span>
+                        {String(index + 1).padStart(2, "0")} /{" "}
+                        {project.category}
+                      </span>
+                      <ArrowUpRight size={20} />
+                    </div>
+                    <Image
+                      className="app-screenshot"
+                      src={`/projects/${project.id}-screen.jpg`}
+                      alt={`${project.name} official App Store preview`}
+                      width={320}
+                      height={480}
+                      sizes="(max-width: 600px) 180px, 220px"
+                    />
+                    <span className="visual-caption">{project.name}</span>
+                  </a>
+                  <div className="project-body">
+                    <div className="project-title">
+                      <Image
+                        src={`/projects/${project.id}-icon.jpg`}
+                        alt=""
+                        width={42}
+                        height={42}
+                      />
+                      <div>
+                        <h3>{project.name}</h3>
+                        <p>{project.playStore ? "iOS & Android" : "iOS"}</p>
+                      </div>
+                    </div>
+                    <p className="project-description">{project.description}</p>
+                    <h4>My contribution</h4>
+                    <ul className="contributions">
+                      {project.contributions.map((point) => (
+                        <li key={point}>
+                          <Check size={15} />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="stack" aria-label="Technologies">
+                      {project.stack.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                    <div className="store-links">
+                      <a
+                        href={project.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        App Store <ArrowUpRight size={15} />
+                      </a>
+                      {project.playStore && (
+                        <a
+                          href={project.playStore}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Google Play <ArrowUpRight size={15} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="work-note">
+              Product previews are from the official App Store listings.
+              Contributions describe my work within the product teams.
             </p>
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about" className="transition hover:text-white">
-              About
-            </a>
-            <a href="#skills" className="transition hover:text-white">
-              Skills
-            </a>
-            <a href="#leadership" className="transition hover:text-white">
-              Leadership
-            </a>
-            <a href="#projects" className="transition hover:text-white">
-              Projects
-            </a>
-            <a href="#contact" className="transition hover:text-white">
-              Contact
-            </a>
-          </nav>
-        </header>
-
-        <div className="grid flex-1 items-center gap-10 py-12 lg:grid-cols-[1.06fr_0.94fr] lg:py-16">
-          <section className="space-y-7">
-            <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
-              Available for Remote React Native Opportunities Worldwide
-            </div>
-            <div className="space-y-5">
-              <p className="text-sm font-medium uppercase tracking-[0.32em] text-slate-400">
-                Karachi, Pakistan
+        </section>
+        <section
+          id="experience"
+          className="section experience-section"
+          aria-labelledby="experience-title"
+        >
+          <div className="container experience-layout">
+            <div>
+              <p className="eyebrow">02 / Experience &amp; leadership</p>
+              <h2 id="experience-title">
+                Hands-on engineer.
+                <br />
+                Accountable team lead.
+              </h2>
+              <p className="section-copy">
+                I stay close to the code while helping developers turn product
+                priorities into coordinated mobile releases.
               </p>
-              <h1 className="max-w-4xl text-4xl font-semibold leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                React Native team lead shipping production apps for iOS and Android.
-              </h1>
-              <p className="max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-                I am a Team Lead React Native Engineer with 4+ years of
-                experience building scalable cross-platform applications for iOS
-                and Android. I work across architecture, execution, payments,
-                integrations, release management, and team delivery for
-                international products.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
               <a
-                className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-                href="#projects"
-              >
-                View Projects
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
+                className="text-link"
                 href="/resume.pdf"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
-                Download Resume
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
-                href="#contact"
-              >
-                Contact
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
-                href="https://www.linkedin.com/in/abdul-qadeer-887332242/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
-                href="https://github.com/qdr108"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
+                View full resume <ArrowUpRight size={16} />
               </a>
             </div>
-          </section>
-
-          <aside className="grid gap-5">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.07] p-7 shadow-2xl shadow-slate-950/40 backdrop-blur">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
-                Core Focus
+            <div className="experience-detail">
+              <p className="current-role">Current role</p>
+              <h3>Team Lead React Native Engineer</h3>
+              <p className="company">
+                Opus Geeks <span>Team of 3 developers</span>
               </p>
-              <div className="mt-5 space-y-5">
+              <div className="responsibility">
+                <span>01</span>
                 <div>
-                  <p className="text-3xl font-semibold text-white">4+ years</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">
-                    Delivering cross-platform mobile apps across iOS and Android
-                    with React Native and TypeScript.
+                  <h4>Lead delivery</h4>
+                  <p>
+                    Break down product priorities, assign ownership and
+                    coordinate execution across iOS and Android.
                   </p>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-white/10 bg-slate-950/50 p-4">
-                    <p className="text-sm text-slate-400">Leadership</p>
-                    <p className="mt-2 text-lg font-semibold text-white">
-                      Team of 3 developers
-                    </p>
-                  </div>
-                  <div className="rounded-2xl border border-white/10 bg-slate-950/50 p-4">
-                    <p className="text-sm text-slate-400">Deployment</p>
-                    <p className="mt-2 text-lg font-semibold text-white">
-                      App Store + Play Store
-                    </p>
-                  </div>
-                </div>
               </div>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-slate-900/70 p-7 backdrop-blur">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
-                High-Impact Stack
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                {[
-                  "React Native",
-                  "TypeScript",
-                  "Redux Toolkit",
-                  "Firebase",
-                  "Stripe",
-                  "Push Notifications",
-                  "Maps & Geolocation",
-                  "IAP & Billing",
-                ].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-100"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section id="about" className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHeading
-            eyebrow="About Me"
-            title="Recruiter-friendly technical leadership with hands-on mobile delivery."
-            description="I lead mobile engineering with a strong execution mindset: clear ownership, reliable architecture, disciplined reviews, and shipping to production without drama."
-          />
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <p className="text-base leading-8 text-slate-300">
-              My work centers on scalable React Native applications, modern
-              TypeScript codebases, and dependable integrations including
-              Firebase, REST APIs, payments, authentication, maps, and push
-              notifications. I contribute beyond implementation by coordinating
-              releases, improving code quality, mentoring engineers, and making
-              sure apps are production-ready for international users and remote
-              teams.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="skills"
-        className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
-      >
-        <SectionHeading
-          eyebrow="Technical Skills"
-          title="A delivery stack built for shipping complex mobile products."
-          description="These are the technologies and operational areas I work with most across product development, team execution, and release ownership."
-        />
-        <div className="mt-10 flex flex-wrap gap-3">
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-slate-200 transition hover:border-cyan-300/40 hover:text-white"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="leadership"
-        className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
-      >
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <SectionHeading
-            eyebrow="Leadership Experience"
-            title="Current role at Opus Geeks."
-            description="I currently lead a team of 3 developers and stay directly involved in both delivery quality and release execution."
-          />
-          <div className="grid gap-4">
-            {leadershipPoints.map((point) => (
-              <div
-                key={point}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
-              >
-                <p className="text-base leading-7 text-slate-200">{point}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="projects"
-        className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
-      >
-        <SectionHeading
-          eyebrow="Featured Projects"
-          title="Selected mobile applications shipped to real users."
-          description="A sample of product work spanning wellness, marketplaces, AI-assisted experiences, and real-time social navigation."
-        />
-        <div className="mt-10 grid gap-6 xl:grid-cols-2">
-          {projects.map((project) => (
-            <article
-              key={project.name}
-              className="group rounded-3xl border border-white/10 bg-slate-900/75 p-7 transition hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-slate-900"
-            >
-              <div className="flex items-start justify-between gap-6">
+              <div className="responsibility">
+                <span>02</span>
                 <div>
-                  <h3 className="text-2xl font-semibold tracking-tight text-white">
-                    {project.name}
-                  </h3>
-                  <p className="mt-4 text-base leading-7 text-slate-300">
-                    {project.description}
-                  </p>
-                  <p className="mt-4 text-sm leading-7 text-slate-400">
-                    <span className="font-semibold text-slate-200">My role:</span>{" "}
-                    {project.role}
+                  <h4>Review &amp; mentor</h4>
+                  <p>
+                    Review code before merge, guide architecture and
+                    implementation, and mentor developers on code quality.
                   </p>
                 </div>
               </div>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.technologies.map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.18em] text-slate-300"
-                  >
-                    {technology}
-                  </span>
-                ))}
+              <div className="responsibility">
+                <span>03</span>
+                <div>
+                  <h4>Own release coordination</h4>
+                  <p>
+                    Handle TestFlight, App Store Connect, Google Play Console
+                    and production deployment workflows.
+                  </p>
+                </div>
               </div>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-                  href={project.appStore}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  App Store
-                </a>
-                {project.playStore ? (
-                  <a
-                    className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/50 hover:bg-white/10"
-                    href={project.playStore}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Play Store
-                  </a>
-                ) : null}
+            </div>
+          </div>
+        </section>
+        <section
+          id="skills"
+          className="section skills-section"
+          aria-labelledby="skills-title"
+        >
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">03 / Technical expertise</p>
+                <h2 id="skills-title">The stack behind the work.</h2>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
-      >
-        <div className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-8 sm:p-10">
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-            <div className="space-y-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">
-                Contact
-              </p>
-              <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Available for Remote React Native Opportunities Worldwide
-              </h2>
-              <p className="max-w-2xl text-base leading-8 text-cyan-50/85 sm:text-lg">
-                I am open to remote roles where I can lead React Native
-                delivery, mentor engineers, and help teams ship reliable mobile
-                products for global users.
+              <p>
+                From mobile features to payments,
+                <br />
+                device integrations and release operations.
               </p>
             </div>
-
-            <div className="grid gap-3 text-sm text-white">
-              <a
-                className="rounded-2xl border border-white/15 bg-slate-950/40 px-5 py-4 transition hover:bg-slate-950/60"
-                href="mailto:aq579733@gmail.com"
-              >
-                aq579733@gmail.com
+            <div className="expertise-grid">
+              {expertise.map((area, index) => (
+                <div className="expertise" key={area.title}>
+                  <span className="expertise-number">0{index + 1}</span>
+                  <h3>{area.title}</h3>
+                  <p className="expertise-items">{area.items}</p>
+                  <p>{area.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section
+          id="contact"
+          className="section contact-section"
+          aria-labelledby="contact-title"
+        >
+          <div className="container contact-layout">
+            <div>
+              <p className="eyebrow">04 / Let&apos;s connect</p>
+              <h2 id="contact-title">Your next mobile engineer.</h2>
+              <p>
+                Open to remote React Native engineering and team lead roles with
+                international teams. Let&apos;s talk about your product, team
+                and the role.
+              </p>
+              <a className="button primary" href={interview}>
+                <Mail size={18} /> Start a conversation{" "}
+                <ArrowUpRight size={18} />
               </a>
-              <a
-                className="rounded-2xl border border-white/15 bg-slate-950/40 px-5 py-4 transition hover:bg-slate-950/60"
-                href="tel:+923131104203"
-              >
-                +92 313-1104203
+            </div>
+            <div className="contact-details">
+              <a href={`mailto:${email}`}>
+                <Mail size={19} />
+                <span>
+                  <small>Email</small>
+                  {email}
+                </span>
+                <ArrowUpRight size={18} />
               </a>
-              <a
-                className="rounded-2xl border border-white/15 bg-slate-950/40 px-5 py-4 transition hover:bg-slate-950/60"
-                href="https://www.linkedin.com/in/abdul-qadeer-887332242/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn Profile
+              <a href="tel:+923131104203">
+                <Phone size={19} />
+                <span>
+                  <small>Phone</small>+92 313-1104203
+                </span>
+                <ArrowUpRight size={18} />
               </a>
-              <a
-                className="rounded-2xl border border-white/15 bg-slate-950/40 px-5 py-4 transition hover:bg-slate-950/60"
-                href="https://github.com/qdr108"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub Profile
+              <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                <Linkedin size={19} />
+                <span>
+                  <small>LinkedIn</small>Connect with Abdul Qadeer
+                </span>
+                <ArrowUpRight size={18} />
+              </a>
+              <a href="/resume.pdf" download="Abdul-Qadeer-Resume.pdf">
+                <Download size={19} />
+                <span>
+                  <small>Resume</small>Abdul Qadeer / PDF
+                </span>
+                <ArrowDown size={18} />
               </a>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+      <footer className="container footer">
+        <span>
+          Abdul Qadeer <span className="footer-dot">/</span> React Native
+          Engineer
+        </span>
+        <a href="#main">
+          Back to top <ArrowUpRight size={15} />
+        </a>
+      </footer>
+    </>
   );
 }
